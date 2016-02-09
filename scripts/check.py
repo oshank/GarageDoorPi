@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 import time
+import os
 
 GPIO.setmode(GPIO.BCM)
 
@@ -9,7 +10,16 @@ GPIO.setmode(GPIO.BCM)
 # Pins to use GPIO25, GPIO8, GPIO7, GPIO2
 # Pins on Pi  22      24     26     3
 
-pinIn = 2
+pinIn = 25
 GPIO.setup(pinIn, GPIO.IN)
 
-if
+if GPIO.input(pinIn):
+    print "Door is Open"
+    os.system("close.py")
+    print "Closing Door"
+else:
+    print "Door is Closed"
+    os.system("open.py")
+    print "Opening Door"
+
+GPIO.cleanup()
