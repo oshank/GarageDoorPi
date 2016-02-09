@@ -21,13 +21,13 @@ try:
     if GPIO.input(pinIn):
         print "Door is Open"
         time.sleep(2)
-        subprocess.call("closeDoor.py", shell=True)
+        subprocess.call("./closeDoor.py", shell=True)
         print "Closing Door"
         GPIO.cleanup()
     else:
         print "Door is Closed"
         time.sleep(2)
-        subprocess.call("openDoor.py", shell=True)
+        subprocess.call("./openDoor.py", shell=True)
         print "Opening Door"
         GPIO.cleanup()
 
