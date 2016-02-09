@@ -17,4 +17,4 @@ while (n==0):
     GPIO.output(pin, GPIO.HIGH)
     sleep(.5)
     GPIO.output(pin, GPIO.LOW)
-    n++
+    n = 1
