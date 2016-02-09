@@ -13,12 +13,11 @@ GPIO.setup(pin, GPIO.OUT)
 try:
     time.sleep(1)
     GPIO.output(pin, GPIO.HIGH)
-    time.sleep(.5)
+    time.sleep(.2)
     GPIO.output(pin, GPIO.LOW)
     GPIO.cleanup()
 
 except KeyboardInterrupt:
-  print "  Quit"
-
+  # print "  Quit"
   # Reset GPIO settings
   GPIO.cleanup()
