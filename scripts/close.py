@@ -13,8 +13,8 @@ n = 0
 # This will be used to close the door if the door is open.
 
 while (n==0):
-    sleep(1)
+    time.sleep(1)
     GPIO.output(pin, GPIO.HIGH)
-    sleep(.5)
+    time.sleep(.5)
     GPIO.output(pin, GPIO.LOW)
     n = 1
