@@ -18,11 +18,11 @@ GPIO.output(pinOut, HIGH)
 
 if GPIO.input(pinIn):
     print "Door is Open"
-    os.system("close.py")
+    #os.system("close.py")
     print "Closing Door"
 else:
     print "Door is Closed"
-    os.system("open.py")
+    #os.system("open.py")
     print "Opening Door"
 
 GPIO.cleanup()
