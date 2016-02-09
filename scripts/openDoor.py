@@ -7,6 +7,8 @@ GPIO.setmode(GPIO.BCM)
 #GPIO pin 18, pin 12 on board
 pin = 18
 GPIO.setup(pin, GPIO.OUT)
+print "Running openDoor.py"
+time.sleep(1)
 
 # This will be used to close the door if the door is open.
 

@@ -21,11 +21,13 @@ try:
     GPIO.output(pinOut, GPIO.HIGH)
     if GPIO.input(pinIn):
         print "Door is Open"
+        time.sleep(2)
         closeDoor
         print "Closing Door"
         GPIO.cleanup()
     else:
         print "Door is Closed"
+        time.sleep(2)
         openDoor
         print "Opening Door"
         GPIO.cleanup()
