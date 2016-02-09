@@ -2,8 +2,7 @@
 import RPi.GPIO as GPIO
 import time
 import os
-import closeDoor
-import openDoor
+import subprocess
 
 GPIO.setmode(GPIO.BCM)
 
@@ -22,13 +21,13 @@ try:
     if GPIO.input(pinIn):
         print "Door is Open"
         time.sleep(2)
-        closeDoor
+        subprocess.cal("closeDoor.py", shell=True)
         print "Closing Door"
         GPIO.cleanup()
     else:
         print "Door is Closed"
         time.sleep(2)
-        openDoor
+        subprocess.cal("openDoor.py", shell=True)
         print "Opening Door"
         GPIO.cleanup()
 
