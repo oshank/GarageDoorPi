@@ -14,7 +14,7 @@ pinIn = 25
 pinOut = 8
 GPIO.setup(pinIn, GPIO.IN)
 GPIO.setup(pinOut, GPIO.OUT)
-GPIO.output(pinOut, HIGH)
+GPIO.output(pinOut, GPIO.HIGH)
 
 if GPIO.input(pinIn):
     print "Door is Open"
