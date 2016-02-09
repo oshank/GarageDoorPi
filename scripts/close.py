@@ -16,3 +16,9 @@ try:
     time.sleep(.5)
     GPIO.output(pin, GPIO.LOW)
     GPIO.cleanup()
+
+except KeyboardInterrupt:
+  print "  Quit"
+
+  # Reset GPIO settings
+  GPIO.cleanup()
