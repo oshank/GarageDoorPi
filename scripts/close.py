@@ -16,6 +16,7 @@ try:
     #time.sleep(.2)
     GPIO.output(pin, GPIO.LOW)
     GPIO.cleanup()
+    print "Closed Door"
 
 except KeyboardInterrupt:
   # print "  Quit"
