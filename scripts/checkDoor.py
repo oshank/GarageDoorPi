@@ -2,6 +2,8 @@
 import RPi.GPIO as GPIO
 import time
 import os
+import closeDoor
+import openDoor
 
 GPIO.setmode(GPIO.BCM)
 
@@ -19,12 +21,12 @@ try:
     GPIO.output(pinOut, GPIO.HIGH)
     if GPIO.input(pinIn):
         print "Door is Open"
-        os.system("close.py")
+        closeDoor
         print "Closing Door"
         GPIO.cleanup()
     else:
         print "Door is Closed"
-        os.system("open.py")
+        openDoor
         print "Opening Door"
         GPIO.cleanup()
 
