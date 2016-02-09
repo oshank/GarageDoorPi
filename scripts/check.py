@@ -11,7 +11,10 @@ GPIO.setmode(GPIO.BCM)
 # Pins on Pi  22      24     26     3
 
 pinIn = 25
+pinOut = 8
 GPIO.setup(pinIn, GPIO.IN)
+GPIO.setup(pinOut, GPIO.OUT)
+GPIO.output(pinOut, HIGH)
 
 if GPIO.input(pinIn):
     print "Door is Open"
