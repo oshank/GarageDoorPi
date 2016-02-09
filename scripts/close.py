@@ -13,7 +13,7 @@ GPIO.setup(pin, GPIO.OUT)
 try:
     time.sleep(1)
     GPIO.output(pin, GPIO.HIGH)
-    time.sleep(.2)
+    #time.sleep(.2)
     GPIO.output(pin, GPIO.LOW)
     GPIO.cleanup()
 
