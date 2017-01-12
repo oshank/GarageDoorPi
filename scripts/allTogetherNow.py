@@ -19,7 +19,7 @@ GPIO.setup(pinOut, GPIO.OUT)
 pin = 18
 GPIO.setup(pin, GPIO.OUT)
 
-def openClose(state):
+def run(state):
     if state == "open":
         try:
             time.sleep(1)
@@ -35,3 +35,4 @@ def openClose(state):
             GPIO.output(pin, GPIO.LOW)
             print "Opened Door"
     GPIO.cleanup()
+
